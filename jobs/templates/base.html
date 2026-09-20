@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get">
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="number" name="age" placeholder="Enter your age">
+        <input type="number" name="experience" placeholder="Enter your experience">
+        <br>
+        <label>Python Skill:</label>
+        <input type="radio" name="python_skill" value="yes">yes
+        <input type="radio" name="python_skill" value="no">no
+        <br>
+        <button type="submit">Check</button>
+    </form>
+    {% if submitted %}
+    {% if age >= 18 and experience >= 1 and python_skill == "yes" %}
+    <h1>Eligible for Job</h1>
+    {%else%}
+    <h2>Not Eligible for Job</h2>
+    {%endif%}
+    {%endif%}
+</body>
+
+</html>
